@@ -57,3 +57,117 @@
   white-space: nowrap;
   clip: rect(0 0 0 0);
 }
+
+button, input, textarea {
+	font-family: inherit;
+}
+
+body {
+	max-width: 1550px;
+}
+
+/*Page-header*/
+
+.page-header__logo {
+	font-family: "Lato";
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #000000;
+}
+
+.site-list__link {
+	font-family: "Lato";
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #000000;
+	text-decoration: none;
+}
+
+.site-list__link:hover {
+	color: #27ae60;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+/*Banner*/
+
+.wrapper {
+	width: 100%;
+	height: 1000px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@media (min-width: 1024px) {
+	.wrapper {
+		background-image: url("img/background-banner.jpg");
+	}
+}
+
+@media (min-width: 1024px) and (min-resolution: 1.5dppx), (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (min-resolution: 144dpi) {
+  .wrapper {
+		background-image: url("img/background-banner@2x.jpg");
+	}
+}
+
+
+@media (min-width: 1024px) {
+	.webp .wrapper {
+		background-image: url("img/background-banner.webp");
+	}
+}
+
+@media (min-width: 1024px) and (min-resolution: 1.5dppx), (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (min-resolution: 144dpi) {
+  .webp .wrapper {
+		background-image: url("img/background-banner@2x.webp");
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.wrapper {
+		background-image: url("img/background-banner-tablet.jpg");
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1.5dppx), (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1023px) and (min-resolution: 144dpi) {
+	.wrapper {
+		background-image: url("img/background-banner-tablet@2x.jpg");
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.webp .wrapper {
+		background-image: url("img/background-banner-tablet.webp");
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1.5dppx), (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1023px) and (min-resolution: 144dpi) {
+	.webp .wrapper {
+		background-image: url("img/background-banner-tablet@2x.webp");
+	}
+}
+
+@media (max-width: 767px) {
+	.wrapper {
+		background-image: url("img/background-banner-mobile.jpg");
+	}
+}
+
+@media (max-width: 767px) and (min-resolution: 1.5dppx), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
+	.wrapper {
+		background-image: url("img/background-banner-mobile@2x.jpg");
+	}
+}
+
+@media (max-width: 767px) {
+	.webp .wrapper {
+		background-image: url("img/background-banner-mobile.webp");
+	}
+}
+
+@media (max-width: 767px) and (min-resolution: 1.5dppx), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
+	.webp .wrapper {
+		background-image: url("img/background-banner-mobile@2x.webp");
+	}
+}
