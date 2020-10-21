@@ -14,30 +14,73 @@
 
 <body>
 	<div class="wrapper">
-	<header class="page-header page-header--menu-opened no-js">
-		<div class="page-header__logo">Здоровая мама</div>
-		<nav class="main-nav">
-			<button class="main-nav__toggler" type="button">
-				<span></span>
-			</button>
-			<ul class="page-header__site-list site-list list">
-				<li class="site-list__item">
-					<a class="site-list__link" href="#">Важность правильного питания</a>
-				</li>
-				<li class="site-list__item">
-					<a class="site-list__link" href="#">Почему мы?</a>
-				</li>
-				<li class="site-list__item">
-					<a class="site-list__link" href="#">Где заказать?</a>
-				</li>
-			</ul>
-		</nav>
+		<header class="page-header page-header--menu-opened no-js">
+			<div class="page-header__logo">Здоровая мама</div>
+			<nav class="main-nav">
+				<button class="main-nav__toggler" type="button">
+					<span></span>
+				</button>
+				<ul class="page-header__site-list site-list list">
+					<li class="site-list__item">
+						<a class="site-list__link" href="#">Важность правильного питания</a>
+					</li>
+					<li class="site-list__item">
+						<a class="site-list__link" href="#">Почему мы?</a>
+					</li>
+					<li class="site-list__item">
+						<a class="site-list__link" href="#">Где заказать?</a>
+					</li>
+				</ul>
+			</nav>
 
-	</header>
+		</header>
+
+		<div class="banner">
+			<div class="banner__promo">
+				<h1 class="banner__title">Доставка здорового питания для мам</h1>
+				<p class="banner__text">Правильный и вкусный рацион для Вас и вашего ребенка</p>
+				<a class="banner__order-button order-button" href="#"><span>Оформить заказ</span></a>
+			</div>
+			<div class="banner__slider radio-slider">
+				<ul class="radio-slider__list list">
+					<li class="radio-slider__item">
+						<input class="visually-hidden" type="radio" name="slider-input" id="pregnant" checked>
+						<label class="radio-slider__text" for="pregnant"><span>Для беременных</span></label>
+						<div class="radio-slider__image radio-slider__image--pregnant">
+							<picture>
+								<source type="image/webp" srcset="img/slider-banner-expectant.webp 1x, img/slider-banner-expectant@2x.webp 2x">
+								<img src="img/slider-banner-expectant.png" srcset="img/slider-banner-expectant@2x.png 2x" width="1065" height="737">
+							</picture>
+						</div>
+					</li>
+					<li class="radio-slider__item">
+						<input class="visually-hidden" type="radio" name="slider-input" id="nursing">
+						<label class="radio-slider__text" for="nursing"><span>Для кормящих</span></label>
+						<div class="radio-slider__image radio-slider__image--nursing">
+							<picture>
+								<source type="image/webp" srcset="img/slider-banner-nursing.webp 1x, img/slider-banner-nursing@2x.webp 2x">
+								<img src="img/slider-banner-nursing.png" srcset="img/slider-banner-nursing@2x.png 2x" width="449" height="724">
+							</picture>
+						</div>
+					</li>
+					<li class="radio-slider__item">
+						<input class="visually-hidden" type="radio" name="slider-input" id="safe-treats">
+						<label class="radio-slider__text" for="safe-treats"><span>Безопасные лакомства</span></label>
+						<div class="radio-slider__image radio-slider__image--safe-treats">
+							<picture>
+								<source type="image/webp" srcset="img/slider-banner-safe-treats.webp 1x, img/slider-banner-safe-treats@2x.webp 2x">
+								<img src="img/slider-banner-safe-treats.png" srcset="img/slider-banner-safe-treats@2x.png 2x" width="470" height="758">
+							</picture>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
 	<!--vendors-->
 	<script src="js/vendors/test-webp.js"></script>
+	<script src="js/vendors/picturefill.js"></script>
 
 	<!--modules-->
 	<script src="js/modules/menu.js"></script>
