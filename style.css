@@ -69,9 +69,8 @@ button, input, textarea {
 .order-button {
 	position: relative;
 	display: block;
-	box-sizing: border-box;
-	width: 245px;
-	height: 68px;
+	width: 223px;
+	height: 50px;
 	padding: 5px;
 	text-decoration: none;
 	font-size: 14px;
@@ -80,14 +79,15 @@ button, input, textarea {
 	color: #ffffff;
 	background-color: #27ae60;
 	border-radius: 40px;
-	border: 1px solid rgba(39, 174, 96, 0.1);
-	background-clip: content-box;
+	border: 4px solid #ffffff;
+	box-shadow: 0 0 0 1px rgba(39, 174, 96, 0.2);
 }
+
 .order-button::after {
 	position: absolute;
 	content: "";
-	top: 11px;
-	right: 10px;
+	top: 9px;
+	right: 4px;
 	width: 43px;
 	height: 43px;
 	background-color: #35b86c;
@@ -100,7 +100,20 @@ button, input, textarea {
 
 .order-button span {
 	display: inline-block;
-	padding: 18px 42px;
+	padding: 15px 40px;
+}
+
+.order-button:hover,
+.order-button:focus {
+	background-color: #ffffff;
+	color: #27ae60;
+	border: 4px solid #27ae60;
+	transition-duration: 0.3s;
+}
+
+.order-button:hover::after,
+.order-button:focus::after {
+	opacity: 0.5;
 }
 
 /*Page-header*/
@@ -455,7 +468,7 @@ button, input, textarea {
 	content: "";
 	left: 195px;
 	top: 159px;
-	width: 425px;
+	width: 420px;
 	height: 421px;
 	padding: 38px;
 	border-radius: 50%;
@@ -468,7 +481,9 @@ button, input, textarea {
 .radio-slider__text {
 	position: absolute;
 	z-index: 2;
-	width: 200px;
+	width: 350px;
+	display: flex;
+	align-items: center;
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 1.4;
@@ -476,19 +491,16 @@ button, input, textarea {
 	cursor: pointer;
 }
 
-.radio-slider__text span {
-	position: relative;
-}
-
-.radio-slider__text:hover {
-	font-size: 18px;
+.radio-slider__text:hover span,
+.radio-slider__text:focus span {
 	color: #2b2b2b;
-	transform: translateX(-50px);
-	transition: font-size 0.3s, transform 0.3s;
+	transform: translateX(-20px) scale(1.1);
+	transition-duration: 0.3s;
 }
 
-.radio-slider__text:hover span::after {
-	transform: translateX(50px) scale(1.6);
+.radio-slider__text:hover::after,
+.radio-slider__text:focus::after {
+	transform: scale(1.86);
 	opacity: 1;
 }
 
@@ -496,19 +508,22 @@ button, input, textarea {
 	color: #2b2b2b;
 }
 
-.radio-slider__text span::after {
-	position: absolute;
+.radio-slider__item input:checked ~ .radio-slider__text::after {
+	opacity: 1;
+}
+
+.radio-slider__text::after {
 	content: "";
-	right: -44px;
-	top: -5px;
-	width: 18px;
-	height: 18px;
+	display: block;
+	width: 20px;
+	height: 20px;
 	padding: 5px;
-	background-color: #27ae60;
-	background-clip: content-box;
-	border-radius: 50%;
-	border: 1px solid #27ae60;
+	margin-left: 14px;
+	background-image: url("img/rounds.svg");
+	background-repeat: no-repeat;
 	opacity: 0.5;
+	transition-duration: 0.3s;
+	transition-property: transform;
 }
 
 .radio-slider__item input:checked + .radio-slider__text span::after {
@@ -516,17 +531,17 @@ button, input, textarea {
 }
 
 .radio-slider label[for="pregnant"] {
-	top: 238px;
-	left: 84px;
+	top: 237px;
+	left: 109px;
 }
 
 .radio-slider label[for="nursing"] {
-	top: 400px;
-	left: 63px;
+	top: 394px;
+	left: 61px;
 }
 
 .radio-slider label[for="safe-treats"] {
-	top: 557px;
+	top: 553px;
 	left: 72px;
 }
 
@@ -541,10 +556,19 @@ button, input, textarea {
 .radio-slider__image img {
 	position: absolute;
 	z-index: 1;
+}
+
+.radio-slider__image--pregnant img {
 	top: 111px;
 	left: -16px;
 }
 
-.radio-slider__image--nursing img, .radio-slider__image--safe-treats img {
-	left: 250px;
+.radio-slider__image--nursing img {
+	left: 231px;
+	top: 58px;
+}
+
+.radio-slider__image--safe-treats img {
+	left: 240px;
+	top: 22px;
 }
