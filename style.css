@@ -69,8 +69,8 @@ button, input, textarea {
 .order-button {
 	position: relative;
 	display: block;
-	width: 223px;
-	height: 50px;
+	width: 225px;
+	height: 49px;
 	padding: 5px;
 	text-decoration: none;
 	font-size: 14px;
@@ -87,7 +87,7 @@ button, input, textarea {
 	position: absolute;
 	content: "";
 	top: 9px;
-	right: 4px;
+	right: 6px;
 	width: 43px;
 	height: 43px;
 	background-color: #35b86c;
@@ -253,20 +253,14 @@ button, input, textarea {
 	.page-header {
 		margin: 0 auto;
 		display: flex;
-		padding-top: 12px;
+		padding-top: 14px;
 	}
 
 	.site-list {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
-		width: 500px;
 		padding-top: 30px;
-	}
-
-	.site-list__item {
-		margin-bottom: 30px;
-		margin-right: 111px;
 	}
 }
 
@@ -277,6 +271,33 @@ button, input, textarea {
 
 	.site-list {
 		width: 822px;
+	}
+
+	.site-list__item {
+		margin-bottom: 30px;
+		margin-right: 111px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.site-list {
+		width: 390px;
+	}
+
+	.site-list__item {
+		margin-right: 45px;
+		margin-bottom: 15px;
+		margin-top: 3px;
+	}
+
+	.site-list__item:last-of-type {
+		margin-right: 40px;
+	}
+
+	.page-header__logo {
+		font-size: 16px;
+		margin-left: 12.37%;
+		width: 156px;
 	}
 }
 
@@ -417,6 +438,10 @@ button, input, textarea {
 		width: 290px;
 		font-size: 18px;
 	}
+
+	.banner__order-button {
+		margin: 52px auto 0;
+	}
 }
 
 @media (max-width: 767px) {
@@ -438,6 +463,7 @@ button, input, textarea {
 
   .banner__promo {
 		width: 100%;
+		padding-top: 78px;
 	}
 
 	.banner__title {
@@ -448,10 +474,6 @@ button, input, textarea {
 	.banner__text {
 		margin: 0 auto;
 		text-align: center;
-	}
-
-	.banner__order-button {
-		margin: 30px auto;
 	}
 }
 
@@ -561,6 +583,7 @@ button, input, textarea {
 .radio-slider__image--pregnant img {
 	top: 111px;
 	left: -16px;
+	width: 1057px;
 }
 
 .radio-slider__image--nursing img {
@@ -571,4 +594,47 @@ button, input, textarea {
 .radio-slider__image--safe-treats img {
 	left: 240px;
 	top: 22px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.radio-slider__image--pregnant img {
+		width: 104vw;
+		height: 71.5vw;
+		top: 105px;
+		left: 97px;
+	}
+
+	.radio-slider__image--nursing img {
+		width: 51.6vw;
+		height: 82vw;
+		left: 286px;
+		top: 35px;
+	}
+
+	.radio-slider__image--safe-treats img {
+		width: 59.5vw;
+		height: 94vw;
+		left: 279px;
+		left: -25px;
+	}
+
+	.banner__slider::after {
+		left: 236px;
+		top: 92px;
+	}
+
+	.radio-slider label[for="pregnant"] {
+		top: 171px;
+		left: 148px;
+	}
+
+	.radio-slider label[for="nursing"] {
+		top: 328px;
+		left: 102px;
+	}
+
+	.radio-slider label[for="safe-treats"] {
+		top: 485px;
+		left: 110px;
+	}
 }
