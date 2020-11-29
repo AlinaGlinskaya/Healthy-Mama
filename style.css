@@ -596,6 +596,10 @@ button, input, textarea {
 	top: 22px;
 }
 
+.radio-slider__button {
+	display: none;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
 	.radio-slider__image--pregnant img {
 		width: 104vw;
@@ -615,7 +619,6 @@ button, input, textarea {
 		width: 59.5vw;
 		height: 94vw;
 		left: 279px;
-		left: -25px;
 	}
 
 	.banner__slider::after {
@@ -636,5 +639,104 @@ button, input, textarea {
 	.radio-slider label[for="safe-treats"] {
 		top: 485px;
 		left: 110px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.radio-slider__text::after {
+		display: none;
+	}
+
+	.radio-slider__image img {
+		position: static;
+	}
+
+	.radio-slider__item input ~ .radio-slider__image {
+		display: block;
+	}
+
+	.radio-slider::after {
+		display: none;
+	}
+
+	.radio-slider__text {
+		width: auto;
+		position: static;
+	}
+
+	.radio-slider__list {
+		display: flex;
+		position: relative;
+	}
+
+	.banner__slider {
+		overflow: hidden;
+	}
+
+	.radio-slider__image--pregnant img {
+		width: 178vw;
+		height: auto;
+		margin-left: -37vw;
+	}
+
+	.radio-slider__image--nursing img {
+		width: 102vw;
+		height: auto;
+		padding-left: 34px;
+		margin-top: -50px;
+	}
+
+	.radio-slider__image--safe-treats img {
+		width: 104vw;
+		height: auto;
+		margin-left: -33px;
+		margin-top: -50px;
+	}
+
+	.radio-slider__button {
+		position: absolute;
+		z-index: 10;
+		top: 270px;
+		display: block;
+		width: 26px;
+		height: 33px;
+		background-color: #27ae60;
+		border-radius: 50%;
+		border: none;
+	}
+
+	.radio-slider__button--prev {
+		left: 12vw;
+	}
+
+	.radio-slider__button--next {
+		left: 83vw;
+	}
+
+	.radio-slider__button span {
+		position: relative;
+	}
+
+	.radio-slider__button span::after {
+		position: absolute;
+		content: "";
+		top: -5px;
+		left: -5px;
+		display: block;
+		width: 6px;
+		height: 6px;
+		background-color: transparent;
+		border-bottom: 2px solid #ffffff;
+	}
+
+	.radio-slider__button--next span::after {
+		border-right: 2px solid #ffffff;
+		transform: rotate(-45deg);
+	}
+
+	.radio-slider__button--prev span::after {
+		border-left: 2px solid #ffffff;
+		transform: rotate(45deg);
 	}
 }

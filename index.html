@@ -42,7 +42,9 @@
 				<a class="banner__order-button order-button" href="#"><span>Оформить заказ</span></a>
 			</div>
 			<div class="banner__slider radio-slider">
-				<ul class="radio-slider__list list">
+				<button class="radio-slider__button radio-slider__button--prev" type="button"><span></span></button>
+				<button class="radio-slider__button radio-slider__button--next" type="button"><span></span></button>
+				<ul class="radio-slider__list list" style="left: 0">
 					<li class="radio-slider__item">
 						<input class="visually-hidden" type="radio" name="slider-input" id="pregnant" checked>
 						<label class="radio-slider__text" for="pregnant"><span>Для беременных</span></label>
@@ -84,6 +86,7 @@
 
 	<!--modules-->
 	<script src="js/modules/menu.js"></script>
+	<script src="js/modules/mobile-slider.js"></script>
 </body>
 
 </html>
